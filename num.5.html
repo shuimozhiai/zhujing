@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>湘大新闻网</title>
+		<style>
+			#box {
+				width: 960px;
+				overflow: auto;
+				margin: 0 auto;
+			}
+			
+			#logo {
+				width: 80px;
+				height: 90px;
+				float: left;
+			}
+			
+			#sougou {
+				width: 600px;
+				height: 90px;
+				float: left;
+			}
+			
+			#SEARCH {
+				position: relative;
+				height: 39px;
+				margin: 24px 4px 0 184px;
+				border: 1px solid #dfdfdf;
+				background-color: #f3f6f8;
+				border-radius: 20px;
+			}
+			
+			#search {
+				position: relative;
+				height: 30px;
+				line-height: 32px;
+				margin: 0 0 0 5px;
+				border: none;
+				background-color: #f3f6f8;
+				width: 225px;
+			}
+			
+			#searchBtn {
+				position: absolute;
+				top: -1px;
+				right: -1px;
+				background: none;
+				border: none;
+				height: 41px;
+				line-height: 34px;
+				padding: 0 24px;
+				color: #FFF;
+				background-color: #1479d7;
+				border-radius: 20px;
+				font-size: 16px;
+				cursor: pointer;
+				margin: 0;
+			}
+			
+			.pic {
+				width: 280px;
+				height: 90px;
+				float: left;
+			}
+			.picture{
+				width:120px ;
+				height: 90px;
+				float: left;
+			}
+
+			.one{
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				background-image: url(picture.png);
+				background-position: 0 -99px;
+				background-repeat: no-repeat;
+				margin-top: 35px;
+				margin-right: 10px;
+				float: left;
+				cursor: pointer;
+			}
+			.one:hover{
+				background-position: 0 -150px;
+			}
+			.two{
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				background-image: url(picture.png);
+				background-position: 0 -194px;
+				background-repeat: no-repeat;
+				margin-top: 35px;
+				margin-right: 10px;
+				float: left;
+				cursor: pointer;
+			}
+			.two:hover{
+				background-position: 0 -244px;
+			}
+			
+			.blank1 {
+				height: 20px;
+				width: 960px;
+				float: left;
+			}
+			
+			#menu {
+				background-color: #1479D7;
+				height: 50px;
+				width: 960px;
+				float: left;
+				position: relative;
+				border-radius: 3px;
+			}
+			
+			.menu {
+				line-height: 18px;
+				position: absolute;
+			}
+			
+			.menu li {
+				float: left;
+				list-style: none;
+				margin-right: 24px;
+				font-size: 20px;				
+			}
+			
+			.a2:link {
+				text-decoration: none;
+				color: white;
+			}
+			
+			.a2:visited {
+				color: white;
+			}
+			
+			.a2:hover {
+				background-color: #f3f6f8;
+				color: blue;
+			}
+			
+			.a2:active {
+				text-decoration: none;
+			}
+			
+			#box1 {
+				height: 104px;
+				width: 960px;
+				float: left;
+			}
+			
+			#left1 {
+				height: 104px;
+				width: 630px;
+				float: left;
+				padding: 0, 0, 0, 1px;
+			}
+			
+			.blank2 {
+				height: 104px;
+				width: 30px;
+				float: left;
+			}
+			
+			#right1 {
+				height: 104px;
+				width: 300px;
+				float: left;
+			}
+			
+			#box2{
+				width: 960px;
+				height: 500px;
+				float: left;
+			}
+			#left2{
+				width: 300px;
+				height: 500px;
+				float: left;
+			}
+			#middle2{
+				width: 300px;
+				height: 500px;
+				float: left;
+			}
+			#right2{
+				width: 300px;
+				height: 500px;
+				float: left;
+			}
+			.blank3{
+				height: 500px;
+				width: 30px;
+				float: left;
+			}
+			.title{
+				width: 300px;
+				height: 50px;
+				line-height: 40px;
+                border-bottom: 1px solid #cae0f3;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(202, 224, 243);
+			}
+			.tit-line{
+				display: inline-block;
+                width: 1px;
+                height: 30px;
+                border-left: 1px solid #e1e1e1;
+                margin: 10px 10px 0 10px;
+                float: left;
+			}
+			.news{
+				float: left;
+				color: #1479D7;
+				line-height: 10px;
+			}
+			.main{
+				width: 300px;
+				height: 449px;
+			}
+			.mainews{
+				list-style: none;
+				float: left;
+				margin: 0;
+				padding: 0;
+				line-height: 29px;
+				cursor: pointer;
+			}
+			.list:link{
+				text-decoration: none;
+			}
+			.list:hover{
+				color: #1479D7;
+			}
+			#rig-top2{
+				width: 300px;
+				height: 200px;
+			}
+			#rig-bottom2{
+				width: 300px;
+				height: 280px;
+			}
+			#blanket{
+				line-height: 22px;
+                padding-left: 0;
+                border-bottom: 1px solid #cae0f3;
+                overflow: hidden;
+                border: 1px solid #cae0f3;
+			}
+			.li1{
+				height: 39px;
+                line-height: 22px;
+                padding-left: 12px;
+                border-bottom: 1px solid #cae0f3;
+                overflow: hidden;
+			}
+			.li2{
+				height: 39px;
+                line-height: 22px;
+                padding-left: 12px;
+                border-bottom: 1px solid #cae0f3;
+                overflow: hidden;
+                background-color: #F3F6F8;
+			}
+			.li{
+				margin: 2px;
+				cursor: pointer;
+				
+			}
+			.li:link{
+				text-decoration: none;
+			}
+			.li:hover{
+				color: #1479D7;
+			}
+			#bot2-1{
+				width: 300px;
+				height: 180px;
+			}
+			#bot2-2{
+				width: 300px;
+				height: 49px;
+			}
+			.blank4{
+				height: 90px;
+				width: 160px;
+				float: left;
+			}
+			#last{
+				width: 960px;
+				height: 200px;
+				float: left;
+				border-top: 1px solid #cae0f3;
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: rgb(202, 224, 243);
+                padding-left: 240px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<div id="logo">
+				<a href="http://www.xtu.edu.cn/" target="_blank">
+					<img src="xtu.jpg" width="80px" height="80px" />
+				</a>
+			</div>
+			<div id="sougou">
+				<div id="SEARCH">
+					<span style="margin:0px 15px;">网页</span>
+					<input id="search" autocomplete="off" />
+					<button id="searchBtn" type="submit">搜狗搜索</button>
+				</div>
+			</div>
+			<div class="pic">
+				<div class="blank4"></div>
+				<div class="picture">
+				    <a class="one"></a>
+				    <a class="two"></a>
+				</div>
+				
+			</div>
+			<div id="menu">
+				<ul class="menu" style="color: white;">
+					<li>
+						<a href="http://news.xtu.edu.cn/" target="_blank" class="a2">首页</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/meitixd/" target="_blank" class="a2">媒体湘大</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/zonghexw/" target="_blank" class="a2">综合新闻</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/jiaoxueky/" target="_blank" class="a2">教学科研</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/xiaoyuansh/" target="_blank" class="a2">校园生活</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/xiangdaxr/" target="_blank" class="a2">湘大学人</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/xuezifc/" target="_blank" class="a2">学子风采</a>
+					</li>
+					<li>
+						<a href="http://news.xtu.edu.cn/html/xiangdaxy/" target="_blank" class="a2">湘大校友</a>
+					</li>
+					<li>
+						<a href="http://xtu.cuepa.cn/" target="_blank" class="a2">校报电子版</a>
+					</li>
+				</ul>
+			</div>
+			<div class="blank1"></div>
+			<div id="box1">
+				<div id="left1">
+					<img src="5-1.jpg" width="630px" height="100px" />
+				</div>
+				<div class="blank2"></div>
+				<div id="right1">
+					<img src="5-2.jpg" width="300px" height="100px" />
+				</div>
+
+			</div>
+			<div class="blank1"></div>
+			<div id="box2">
+				<div id="left2">
+					<div class="title">
+						<h2 class="news" style="cursor: pointer;">要闻</h2>
+						<span class="tit-line"></span>
+						<h2 class="news" style="cursor: pointer;">湘大新闻</h2>
+					</div>
+					<div class="main">
+                        <ul class="mainews">
+                        	<li>
+                        		<a class="list">我校思想政治理论课强化“红色”实践教学</a>
+                        	</li>
+                        	<li>
+                        		<a class="list">校长周益春专题调研碧泉书院建设发展情况</a>
+                        	</li>
+                        	<li>
+                        		<a class="list">第三十八届学生田径运动会举行</a>
+                        	</li>
+                        	<li><a class="list">湘潭大学体育发展基金成立 4位校友捐赠第一笔赠款</a></li>
+                        	<li><a class="list">青春无畏 逐梦扬威：“洋光杯”新生定向越野大赛举行</a></li>
+                        	<li><a class="list">省内高校102名辅导员在我校接受法律法规培训</a></li>
+                        	<li><a class="list">2018级新生班长团支书接受能力素养提升训练</a></li>
+                        	<li><a class="list">校党委书记黄云清赴泸溪县洗溪镇张家坪村调研指导</a></li>
+                        	<li><a class="list">我校召开学位授权点建设工作推进会</a></li>
+                        </ul>
+					</div>
+				</div>
+				<div class="blank3"></div>
+				<div id="middle2">
+					<div class="title">
+						<h2 class="news" style="cursor: pointer;">今日话题</h2>
+						<div class="main">
+							<ul class="mainews">
+								<li><a class="list">书香遇见墨香——图书馆字画的故事</a></li>
+								<li><a class="list">我校纪念复校40周年活动有序推进</a></li>
+								<li><a class="list">老同志畅谈“湘大精神”座谈会举行</a></li>
+								<li><a class="list">静心笃志成大器———记81级校友、中国科学院院士周向宇</a></li>
+								<li><a class="list">人才就是竞争力——第7任校长潘长良谈学校改革与发展</a></li>
+								<li><a class="list">谈湘大精神与湘大校风</a></li>
+								<li><a class="list">纪念复校40周年：老领导谈“湘大校风”</a></li>
+								<li><a class="list">依法推动中国—东南非经贸合作</a></li>
+								<li><a class="list">中国—东南非经贸及投资法律研讨会闭幕式</a></li>
+								<li><a class="list">日非法“购岛”扰乱国际法律秩序</a></li>
+								<li><a class="list">中国—东南非经贸及投资法律研讨会闭幕</a></li>
+								<li><a class="list">中非法律界人士商讨双边经贸风险防范</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="blank3"></div>
+				<div id="right2">
+					<div id="rig-top2">
+						<ul id="blanket">
+							<li class="li1">
+								<a class="li">今日热点</a>
+								<a class="li">校园新闻</a>
+								<a class="li">媒体传真</a>
+								<a class="li">专题短片</a>
+							</li>
+							<li class="li2">
+								<a class="li">媒体湘大</a>
+								<a class="li">综合新闻</a>
+								<a class="li">教学科研</a>
+								<a class="li">校园生活</a>
+							</li>
+							<li class="li1">
+								<a class="li">湘大学人</a>
+								<a class="li">学子风采</a>
+								<a class="li">湘大校友</a>
+								<a class="li">专题新闻</a>
+							</li>
+							<li class="li2">
+								<a class="li">视频新闻</a>
+								<a class="li">校报电子版</a>
+								<a class="li">在线投稿</a>
+								<a class="li">全部</a>
+							</li>
+						</ul>
+					</div>
+					<div id="rig-bottom2">
+						<div class="title">
+							<h2 class="news" style="cursor: pointer;">资讯</h2>
+						</div>
+						<div id="bot2-1">
+							<img style="cursor: pointer;" src="5-3.png" width="300px" height="180px" />
+						</div>
+						<div id="bot2-2">
+							<a class="li">“健全容错纠错机制 激励干部担当作为”专题研讨会在我校召开。</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+            <div class="blank1"></div>
+            <div class="blank1"></div>
+            <div id="last">
+            	
+            			Copyright 2001-2018
+		                <font color="#FF3300"><a href="http://218.75.242.251:8007/" target="_blank">湘潭大学党委宣传部</a></font>
+		                &nbsp; 地址：中国湖南湘潭. 邮编：411105
+		                <br />
+		                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.jsp?cc=cindex&amp;cd=counter" target="_blank"><script language="JavaScript" src="index.jsp?cd=counter&amp;ac=showcounter"></script>访问量:<img src="http://news.xtu.edu.cn/template/compo/images/counter/4.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/6.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/9.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/2.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/2.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/4.gif" align="center" valign="middle" border="0"><img src="http://news.xtu.edu.cn/template/compo/images/counter/0.gif" align="center" valign="middle" border="0"></a>
+		                <br />
+		                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;湘ICP备：05005862号 湘教QS3-200505-000059&nbsp;
+		                <a href="./adminpt.jsp" target="_blank">管理入口</a>
+		                <br />
+            		
+            </div>
+
+		</div>
+	</body>
+
+</html>
