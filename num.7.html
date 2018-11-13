@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#box {
+				width: 100%;
+				overflow: auto;
+				border: solid;
+				padding: 5px 0;
+			}
+			
+			#box1 {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			#box2 {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			#button {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			.p1 {
+				color: blue;
+				font-size: 30px;
+			}
+			
+			.p2 {
+				color: blue;
+				font-size: 30px;
+			}
+			
+			.a1 {
+				color: blue;
+				font-size: 30px;
+				display: block;
+			}
+			a:link{
+				text-decoration: none;
+			}
+			a:hover{
+				color: lightskyblue;
+			}
+		</style>
+		<script>
+			function changeA2() {
+				x = document.createElement("a");
+				y = document.createTextNode("第二个a元素");
+				x.appendChild(y);
+				document.body.appendChild(x);
+				x.setAttribute("href", "#");
+				x.style.color = "yellow";
+				x.style.backgroundColor = "red"
+				x.style.textDecoration = "none";
+				x.style.fontSize = "30px";
+
+			}
+
+			function changeP() {
+				x = document.getElementById("box1");
+				x.removeChild(x.childNodes[0]);
+			}
+
+			function changeA() {
+				x = document.getElementById("box2");
+				x.removeChild(x.childNodes[0]);
+			}
+
+			function changeAll() {
+				x = document.getElementById("box");
+				x.style.backgroundColor = "red";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<div id="box1">
+				<p class="p1">第一个p元素</p>
+				<p class="p2">第二个p元素</p>
+			</div>
+			<div id="box2">
+				<a class="a1" href="#">第一个a元素</a>
+			</div>
+		</div>
+		<div id="button">
+			<button onclick="changeA2()">1</button>
+			<button onclick="changeP()">2</button>
+			<button onclick="changeA()">3</button>
+			<button onclick="changeAll()">4</button>
+		</div>
+
+	</body>
+
+</html>
