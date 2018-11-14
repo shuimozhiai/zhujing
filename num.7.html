@@ -12,16 +12,6 @@
 				padding: 5px 0;
 			}
 			
-			#box1 {
-				width: 100%;
-				overflow: auto;
-			}
-			
-			#box2 {
-				width: 100%;
-				overflow: auto;
-			}
-			
 			#button {
 				width: 100%;
 				overflow: auto;
@@ -42,19 +32,21 @@
 				font-size: 30px;
 				display: block;
 			}
-			a:link{
+			
+			a:link {
 				text-decoration: none;
 			}
-			a:hover{
+			
+			a:hover {
 				color: lightskyblue;
 			}
 		</style>
 		<script>
 			function changeA2() {
-				x = document.createElement("a");
-				y = document.createTextNode("第二个a元素");
-				x.appendChild(y);
-				document.body.appendChild(x);
+				var div = document.getElementById("box");
+				var x=document.createElement("A")
+				div.appendChild(x)
+				x.innerHTML="</br>"+"新增的a元素"
 				x.setAttribute("href", "#");
 				x.style.color = "yellow";
 				x.style.backgroundColor = "red"
@@ -64,37 +56,50 @@
 			}
 
 			function changeP() {
-				x = document.getElementById("box1");
-				x.removeChild(x.childNodes[0]);
+				var div = document.getElementById("box");
+				var y=div.childNodes;
+				for(i=0;i<y.length;i++){
+					if (y[i].tagName=="P")
+					div.removeChild(y[i]);
+				}
 			}
 
 			function changeA() {
-				x = document.getElementById("box2");
-				x.removeChild(x.childNodes[0]);
+				var div = document.getElementById("box");
+				var y=div.childNodes;
+				var loop=y.length
+				for(i=loop-1;i>=0;i--){
+					if (y[i].tagName=="A")
+					div.removeChild(y[i])
+				}
 			}
 
 			function changeAll() {
-				x = document.getElementById("box");
-				x.style.backgroundColor = "red";
+				var x = document.getElementById("box");
+				var y = x.childNodes;
+				var loop = y.length;
+				for(i=0;i<loop;i++){
+					if (y[i].tagName=="P" || y[i].tagName=="A")
+					x.style.backgroundColor="red";
+				}
 			}
 		</script>
 	</head>
 
 	<body>
 		<div id="box">
-			<div id="box1">
-				<p class="p1">第一个p元素</p>
-				<p class="p2">第二个p元素</p>
-			</div>
-			<div id="box2">
-				<a class="a1" href="#">第一个a元素</a>
-			</div>
+
+			<p class="p1">第一个p元素</p>
+			<p class="p2">第二个p元素</p>
+
+			<a class="a1" href="#">第一个a元素</a>
+
 		</div>
 		<div id="button">
-			<button onclick="changeA2()">1</button>
-			<button onclick="changeP()">2</button>
-			<button onclick="changeA()">3</button>
-			<button onclick="changeAll()">4</button>
+			<button onclick="changeA2()">增加一个a</button>
+			<button onclick="changeP()">删除所有p</button>
+			<button onclick="changeA()">删除所有a</button>
+			<button onclick="changeAll()">改变颜色</button>
 		</div>
 
 	</body>
