@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#box {
+				width: 400px;
+				overflow: auto;
+				margin: 0 auto;
+			}
+			
+			#mark {
+				width: 400px;
+				overflow: auto;
+				margin: 0 auto;
+			}
+		</style>
+		<script type="text/javascript">
+			var count = 1; //全局变量
+			function createTr() {
+				document.getElementById("table");
+				tr = document.createElement("tr");
+				table.appendChild(tr);
+
+				td1 = document.createElement("td");
+				tr.appendChild(td1);
+				td1.innerHTML = count;
+
+				td2 = document.createElement("td");
+				tr.appendChild(td2);
+				newSpan = document.createElement("span");
+				td2.appendChild(newSpan);
+				newSpan.innerHTML = document.getElementById("name").value;
+				//				newSpan.addEventListener("mouseover",function(){this.style.color = "red"}
+				//				td2.innerHTML = document.getElementById("name").value;				
+
+				td3 = document.createElement("td");
+				tr.appendChild(td3);
+				var b1 = document.getElementsByName('性别');
+				for(var i = 0; i < b1.length; i++) {
+					if(b1[i].checked == true)
+						td3.innerHTML = b1[i].value;
+				}
+				td4 = document.createElement("td");
+				tr.appendChild(td4);
+				td4.innerHTML = "<a href='javascript:void(0);' onclick='delTr(this)'>删除</a>"
+
+				count++;
+			}
+			//			function.delTr(obj){
+			//				delTr = obj.parentNode.parentNode;
+			//				delTr.parentNode.removeChild(delTr);
+			//			}
+			function delTr(obj) {
+				var table = obj.parentNode.parentNode.parentNode;
+				var tr = obj.parentNode.parentNode;
+				table.removeChild(tr);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<label>姓名</label><input type="text" id="name" />
+			<label>性别</label><input type="radio" name="性别" id="sex" checked="checked" value="男" />男<input type="radio" name="性别" id="sex" value="女" />女
+			<button onclick="createTr()" id="button">增加按钮</button>
+		</div>
+		</br>
+		<div id="mark">
+			<table id="table">
+				<tr style="background-color: royalblue; color: white;">
+					<th width="100px" id="id">编号</th>
+					<th width="100px">姓名</th>
+					<th width="100px">性别</th>
+					<th width="100px" id="del">操作</th>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>
