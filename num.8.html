@@ -33,12 +33,12 @@
 				newSpan = document.createElement("span");
 				td2.appendChild(newSpan);
 				newSpan.innerHTML = document.getElementById("name").value;
-				//				newSpan.addEventListener("mouseover",function(){this.style.color = "red"}
-				//				td2.innerHTML = document.getElementById("name").value;				
+				newSpan.addEventListener("mouseover",function(){this.style.color = "red";});
+				newSpan.addEventListener("mouseout",function(){this.style.color = "black";});
 
 				td3 = document.createElement("td");
 				tr.appendChild(td3);
-				var b1 = document.getElementsByName('性别');
+				var b1 = document.getElementsByName("性别");
 				for(var i = 0; i < b1.length; i++) {
 					if(b1[i].checked == true)
 						td3.innerHTML = b1[i].value;
@@ -49,10 +49,7 @@
 
 				count++;
 			}
-			//			function.delTr(obj){
-			//				delTr = obj.parentNode.parentNode;
-			//				delTr.parentNode.removeChild(delTr);
-			//			}
+	
 			function delTr(obj) {
 				var table = obj.parentNode.parentNode.parentNode;
 				var tr = obj.parentNode.parentNode;
