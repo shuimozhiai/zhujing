@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>销售</title>
+		<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+		<script src="js/jquery1.js"></script>
+	    <script src="js/upload.js"></script>
+
+		<style>
+			.menuWindow li a span{
+				display: none;
+			}
+			.menuWindow li a:hover span{
+				display: block;
+				cursor: hand;
+			}
+			#box {
+				width: 960px;
+				margin: 0 auto;
+				overflow: auto;
+
+			}
+			#top{
+				width: 960px;
+				overflow: auto;
+				position: absolute;				
+				background-color: khaki;
+
+
+			}
+			.blank{
+				width: 100%;
+				height: 60px;
+				float: left;
+				text-align: center;
+				font-size: 40px;
+			}
+			#topic{
+				width: 100%;
+				height: 105px;
+				float: left;
+				text-align: center;
+				font-size: 60px;
+				background-color: white;
+			}
+			#main{
+				width: 940px;
+				overflow: auto;
+				font-size: 25px;
+				padding-left: 20px;
+			}
+			#bottom{
+				width: 100%;
+				overflow: auto;
+				float: left;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<!-- 代码部分begin -->
+			<div class="menuHolder" style="width: 100px; float: left;">
+				<div class="menuWindow">
+					<ul class="p1">
+						<li class="s1">
+							<a href="#url">The Second Family</a>
+							<ul class="p2 a3">
+								<li class="s2">
+									<a href="num.10.html"><p>首页</p></a>
+								</li>
+								<li class="s2">
+									<a href="#url"><p>服务</p></a>
+									<ul class="p3 a3">
+										
+										<li>
+											<a href="web10-1.html">购买</a>
+										</li>
+										<li>
+											<a href="web10-2.html">销售</a>
+										</li>
+										<li>
+											<a href="web10-3.html">评价</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="s2">
+									<a href="#url"><p>联系我们</p></a>
+									<ul class="p3 a3">
+										<li>
+											<a href="#">
+												<h4>邮箱</h4>
+												<span>1234@360.com</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h4>邮递</h4>
+												<span>075100</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h4>电话</h4>
+												<span>123456789</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 代码部分end -->
+			<div id="top">
+				<div id="topic">
+					<img src="img/10-1.jpg" height="100px" width="150px"  />
+					<img src="img/10-2.jpg" height="80px"  />
+				</div>
+				<div class="blank"><b>卖家信息</b></div>
+				<div id="main">
+					<label><h4>*输入您的昵称</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*您想卖的商品</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*出售价格</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*联系方式</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*邮箱</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*商品介绍（如尺寸等）</h4></label><br />
+					<textarea style="width: 800px; height: 100px;"></textarea>
+					<br /><br />
+					
+					<script src="/demos/googlegg.js"></script>
+
+					<h4>*请上传图片</h4>
+					<div id="drop_area"></div>
+
+					<script type="text/javascript">
+						var dragImgUpload = new DragImgUpload("#drop_area", {
+							callback: function(files) {
+								//回调函数，可以传递给后台等等
+								var file = files[0];
+								console.log(file.name);
+							}
+						})
+					</script><br />
+					<label><h4>备注</h4></label><br />
+					<textarea style="width: 800px; height: 100px;"></textarea>
+					
+				</div>
+				<div class="blank"></div>
+				<div id="bottom">
+					<button style="height: 40px; width: 80px; margin-left: 450px;">提 交</button>
+				</div>
+				<div class="blank"></div>
+			</div>
+			
+		</div>
+	</body>
+
+</html>
