@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			#search {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			#Search {
+				height: 20px;
+				width: 450px;
+				border-radius: 50px;
+				font-size: 20px;
+				background-color: #f3f6f8;
+				border: none;
+			}
+			
+			#searchBtn {
+				height: 45px;
+				width: 125px;
+				border-radius: 50px;
+				margin-top: -53px;
+				margin-left: 326px;
+				background-color: orange;
+				border: none;
+				cursor: pointer;
+				line-height: 0;
+			}
+			
+			#main {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			.obj {
+				float: left;
+				height: 400px;
+				width: 300px;
+				background-color: white;
+				margin: 35px;
+			}
+			
+			.pic {
+				width: 100%;
+				height: 340px;
+			}
+			
+			.massage {
+				width: 100%;
+				height: 55px;
+				background-color: white;
+				font-size: 20px;
+				padding-top: 5px;
+			}
+			
+			.massage a:hover {
+				color: red;
+				cursor: pointer;
+			}
+			
+			.blank1 {
+				width: 250px;
+				height: 50px;
+			}
+			
+			.blank2 {
+				width: 100%;
+				height: 30px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div data-role="page" id="pageone">
+			<div data-role="header">
+				<h1>The Second Family</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<div style="float: left; margin-left: 500px;">
+					<input id="Search" />
+					<button id="searchBtn"><h3>搜 索</h3></button>
+				</div>
+				<div class="blank1"></div>
+				<div style="margin-left: 500px; margin-top: 100px; width: 450px;">
+					<img src="JQM-1.png" width="450px" height="150px" />
+					<img src="img/10-1.jpg" width="450px" height="400px" />
+				</div>
+				
+				<a href="#pagetwo" data-transition="turn">下一页</a>
+			</div>
+
+			<div data-role="footer">
+				<h1></h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagetwo">
+			<div data-role="header">
+				<h1>The Second Family</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<div id="top">
+					<p>
+					<div id="search">
+						
+						<div style="float: left; margin-left: 500px;">
+							<input id="Search" />
+							<button id="searchBtn"><h3>搜 索</h3></button>
+						</div>
+						<div class="blank1"></div>
+
+					</div>
+					<div class="blank2"></div>
+					<div id="main">
+						<div class="obj">
+							<div class="pic">
+								<img src="img/10-8.jpg" width="300px" height="340px"></img>
+							</div>
+							<div class="massage">
+								<a>英语学习资料<br />¥35</a>
+							</div>
+						</div>
+						<div class="obj">
+							<div class="pic">
+								<img src="img/10-9.jpg" width="300px" height="340px"></img>
+							</div>
+							<div class="massage">
+								<a>自行车<br />¥150</a>
+							</div>
+						</div>
+						<div class="obj">
+							<div class="pic">
+								<img src="img/10-10.jpg" width="300px" height="340px"></img>
+							</div>
+							<div class="massage">
+								<a>小说传记<br />¥60</a>
+							</div>
+						</div>
+						<div class="obj">
+						<div class="pic">
+							<img src="img/10-11.jpg" width="300px" height="340px"></img>
+						</div>
+						<div class="massage">
+							<a>自行车配件<br />¥9.9~50</a>
+						</div>
+					</div>
+					</p>
+					</div>
+				</div>
+				<a href="#pageone" data-transition="flow">上一页</a>
+				<a href="#pagethree" data-transition="slideup">下一页</a>
+			</div>
+
+			<div data-role="footer">
+				<div data-role="page" id="pageone">
+  <div data-role="main" class="ui-content">
+    <a href="pageone" class="ui-btn ui-icon-home ui-btn-icon-left"></a>
+  </div>
+</div>
+			</div>
+		</div>
+
+		<div data-role="page" id="pagethree">
+			<div data-role="header">
+				<h1>The Second Family</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<div class="blank"><b>卖家信息</b></div>
+				<div id="main">
+					<label><h4>*输入您的昵称</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*您想卖的商品</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*出售价格</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*联系方式</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*邮箱</h4></label><br />
+					<input style="width: 200px; height: 30px;" /><br /><br />
+					<label><h4>*商品介绍（如尺寸等）</h4></label><br />
+					<textarea style="width: 800px; height: 100px;"></textarea>
+					<br /><br />
+					
+					<script src="/demos/googlegg.js"></script>
+
+					<h4>*请上传图片</h4>
+					<div id="drop_area"></div>
+
+					<script type="text/javascript">
+						var dragImgUpload = new DragImgUpload("#drop_area", {
+							callback: function(files) {
+								//回调函数，可以传递给后台等等
+								var file = files[0];
+								console.log(file.name);
+							}
+						})
+					</script><br />
+					<label><h4>备注</h4></label><br />
+					<textarea style="width: 800px; height: 100px;"></textarea>
+					
+				</div>
+				<div class="blank"></div>
+				<div id="bottom">
+					<button style="height: 40px; width: 80px; margin-left: 450px;">提 交</button>
+				</div>
+				<div class="blank"></div>
+			</div>
+				<a href="#pagetwo">上一页</a>
+			</div>
+
+			<div data-role="footer">
+				<h1>底部文本</h1>
+			</div>
+		</div>
+
+	</body>
+
+</html>
